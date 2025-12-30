@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./Static/Css/style.css" />
+  </head>
 
-    
+  <body>
+    <header>
+      <!-- nav bar glasss , blur -->
+    </header>
+    <main>
+      <!-- the perfect banana for every taste -->
+      <h1 class="title">
+        Unpeel the <span>Adventure</span>: The ULtimate BAnana Experience
+      </h1>
 
-</body>
+      <script
+        type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+      <!-- <model-viewer
+        src="./Static/Picture/3D Model/Banana/Banan 2.glb"
+        alt="A 3D model"
+        auto-rotate
+        camera-controls
+        ar></model-viewer> -->
+
+      <!-- add 2 peace of banana ; for top of banana for
+                      +      +
+                       banana -->
+      <div class="banana-face">
+        <div class="eyes-container">
+          <model-viewer
+            src="./Static/Picture/3D Model/Banana/Slices Banana.glb"
+            alt="A 3D model"
+            class="eye"
+            auto-rotate
+            camera-orbit=" 0deg  -25deg 0 "
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            environment-image="neutral"
+            exposure="1"
+            shadow-intensity="1"
+            touch-action="pan-y"></model-viewer>
+          <model-viewer
+            src="./Static/Picture/3D Model/Banana/Slices Banana.glb"
+            alt="A 3D model"
+            class="eye"
+            auto-rotate
+            camera-orbit=" 0deg  -25deg 0 "
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            environment-image="neutral"
+            exposure="1"
+            shadow-intensity="1"
+            touch-action="pan-y"></model-viewer>
+        </div>
+        <model-viewer
+          src="./Static/Picture/3D Model/Banana/Banan 2 ( Super Banner ).glb"
+          class="mouth main-banana"
+          ar-modes="webxr scene-viewer quick-look"
+          environment-image="neutral"
+          exposure="1"
+          shadow-intensity="1"
+          touch-action="pan-y"></model-viewer>
+      </div>
+
+      <h2>hdawdawd</h2>
+      <model-viewer
+        src="./Static/Picture/3D Model/Banana/3Banana2.glb"
+        alt="A 3D model"
+        name="banana"
+        id="3banana"
+        auto-rotate
+        camera-orbit=" -15deg  0 0 "
+        ar></model-viewer>
+    </main>
+  </body>
 </html>

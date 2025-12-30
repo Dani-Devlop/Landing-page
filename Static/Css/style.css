@@ -1,0 +1,136 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fff8e7 0%, #ffe8b6 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 5vw, 2rem) clamp(1rem, 5vw, 2rem) ;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(2rem, 8vw, 3rem);
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(1.5rem, 6vw, 3rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+   /* #fef9f3 */
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.title span {
+  color:   #f4d35e;
+  font-style: italic;
+}
+
+.banana-face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: clamp(1.5rem, 5vw, 2.5rem); */
+  /* gap : -200px ; */
+  margin-bottom: -200px;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.eyes-container {
+  display: flex;
+  gap: clamp(1.5rem, 10vw, 40rem);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -4rem;
+}
+
+.eye {
+  width: clamp(60px, 10vw, 100px);
+  height: clamp(60px, 10vw, 100px);
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8d4a8 0%, #d4c5a0 100%);
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.1),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.5), 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  animation: eyeRotate 8s linear infinite;
+}
+
+.eye::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(
+    circle at 35% 35%,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+  border-radius: 50%;
+  animation: eyeShine 3s ease-in-out infinite;
+}
+
+@keyframes eyeRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes eyeShine {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transition: all 1s;
+    transform: translateY(0px) rotate(360deg);
+  }
+}
+
+.mouth {
+  animation: mouthWiggle 2s ease-in-out infinite;
+}
+
+@keyframes mouthWiggle {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+}
+
+.main-banana {
+  width: clamp(200px, 35vw, 400px);
+  height: clamp(200px, 35vw, 400px);
+  animation: bananaBounce 2.5s ease-in-out infinite;
+}
+
+@keyframes bananaBounce {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(2deg);
+  }
+}
+
+.userInput .show {
+  justify-content: center;
+  align-self: center;
+}
